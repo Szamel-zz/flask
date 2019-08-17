@@ -13,10 +13,16 @@ def my_country():
     return '<h1>Hello Hungary!</h1>'
 
 
-@app.route('/horde/<name>')  # 127.0.0.1:5000/horde/Garrosh
+@app.route('/horde/<name>')  # 127.0.0.1:5000/horde/Garrosh e.g.
 def hero(name):
     return '<h1>This is a page for {}!</h1>'.format(name)
 
 
+@app.route('/error')  # 127.0.0.1:5000/error
+def my_error():
+    message = '<h1>Testing debug</h1>'
+    return message[100]
+
+
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
