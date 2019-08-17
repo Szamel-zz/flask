@@ -13,5 +13,10 @@ def my_country():
     return '<h1>Hello Hungary!</h1>'
 
 
+@app.route('/horde/<name>')  # 127.0.0.1:5000/horde/Garrosh
+def hero(name):
+    return '<h1>This is a page for {}!</h1>'.format(name)
+
+
 if __name__ == '__main__':
     app.run()
