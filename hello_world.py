@@ -23,6 +23,14 @@ def my_error():
     message = '<h1>Testing debug</h1>'
     return message[100]
 
+# Flask Routing Exercise
+@app.route('/puppy_latin/<name>')  # 127.0.0.1:5000/puppy_latin/Spotty e.g.
+def latin(name):
+    if name[-1] == 'y':
+        return '<h1>Hi {}! Your puppy latin name  is {}</h1>'.format(name, name[:-1]+'iful')
+    else:
+        return '<h1>Hi {}! Your puppy latin name  is {}</h1>'.format(name, name + 'y')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
