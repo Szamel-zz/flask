@@ -10,6 +10,25 @@
     <h2>{{my_variable}}</h2>
     <h2>Sum of {{my_list}}: {{my_sum}}</h2>
     <h2>{{my_dict}}, {{my_dict['race']}}</h2>
+
+    <ul>
+        {% for item in my_list %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    {% if 2 in my_list %}
+    <p>2 is in the list</p>
+    {% else%}
+    <p>there is no 2 in the list</p>
+    {% endif %}
+
+    {% if user_loged_in %}
+    <p>Welcome back! You are now logged in</p>
+    {% else%}
+    <p>Please log in!</p>
+    {% endif %}
+
     <img src="../static/Garrosh.jpg" alt="">
 </body>
 </html>

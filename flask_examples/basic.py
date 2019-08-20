@@ -14,11 +14,13 @@ def index():
     my_list = [1, 2, 3, 4]
     sum_of_my_list = sum(my_list)
     my_dict = {'race': 'orc'}
+    user_loged_in = True
     return render_template('basic.html',
                            my_variable=greetings,
                            my_list=my_list,
                            my_sum=sum_of_my_list,
-                           my_dict=my_dict)
+                           my_dict=my_dict,
+                           user_loged_in=user_loged_in)
 
 
 if __name__ == '__main__':
